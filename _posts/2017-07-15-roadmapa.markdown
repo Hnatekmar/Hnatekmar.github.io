@@ -4,3 +4,18 @@ title: "Roadmapa"
 tags:
  - roadmapa
 ---
+V současnosti to vidím tak, že by se dal celý projekt rozdělit do několika samostatných částí, které na sebe navazují.
+{% include progress.markdown %}
+
+## Převodník
+Jako dobrý začátek se mi jeví získáním potřebných dat, ze kterých bude celá práce vycházet (nebo alespoň generátor). Asi nejpalčivější problém předsatvuje získání jízdních řádů. Asi nejlepším zdrojem jízdních řádů je v současnosti JDF (jednotný datový formát), který obsahuje jízdní řády a jiné pro tento projekt docela nepodsatné udaje.
+
+Jelikož je formát jdf použivaný jenom na území ČR a na Slovenska a své využití najde jen v několika málo případech mě ani moc nepřekvapilo, že jsem nenašel žádnou knihovnu pro jeho načítání/manipulaci neexistuje. Je tedy jasné, že si tuto knihovnu musím napsat sám nicméně při hledání vhodného datového zdroje jsem narazil na mnohem [rozšířenější](https://transit.land/feed-registry) datový formát gtfs, který je vyvíjen googlem. Díky jeho dostupnosti a dalším výhodám (existence java knihovny atd...) jsem se rozhodl, že napíšu převodník do gtfs. Tento přístup bude mít tu výhodu, že generátor bude moci používat jak existující gtfs zdroje, tak ČR navíc jsem si říkal, že by se převodník mohl hodit i někomu jinému...
+
+Celý popis projektu lze nalézt na [githubu](https://github.com/Hnatekmar/jdf2gtfs).
+
+## Generátor
+Ačkoliv jsem se k návrhu samotného generátoru ještě nedostal řekl bych, že by mohl vypadat následovně:
+	- Výpočet matice pro danou oblast
+		- Nalezení vhodné funkce pro ohodnocení buňky
+	- Vykreslení do bitmapy

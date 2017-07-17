@@ -11,5 +11,5 @@ gantt
     section Generátor mapových vrstev 
 	    Návrh algoritmu :b1, after a4, 5d
 	    Prototypování :b1, after a4, 5d
-            Implementace :b2, after b1, 10d
+            Implementace :b2, after b1, 20d
 </div>
