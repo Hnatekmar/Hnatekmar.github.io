@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Calendar"
+tags:
+ - jdf2gtfs
+---
+Dnes jsem sel zabýval generováním tabulky Calendar, která obsahuje platnost jednotlivých jízdních řádů pro každý den v týdnu. Protože neexistuje žádný jednoduchý způsob, jak informaci o platnosti jízdních řádů v jdf, jsem se rozhodl, že bude nejlepší prozatím přidat záznam, který indikuje, že jízdní řád platí všechny dny v týdnu po celý rok. Samozřejmě tato situace není úplně ideální ale pro účely generátoru je postačující...
