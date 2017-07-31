@@ -4,18 +4,18 @@ title: "Roadmapa"
 tags:
  - roadmapa
 ---
-V současnosti to vidím tak, že by se dal celý projekt rozdělit do několika samostatných částí, které na sebe navazují.
+Celý projekt by se dal rozdělit do několika samostatných částí, které na sebe navazují.
 {% include progress.markdown %}
 
 ## Převodník
-Jako dobrý začátek se mi jeví získáním potřebných dat, ze kterých bude celá práce vycházet (nebo alespoň generátor). Asi nejpalčivější problém předsatvuje získání jízdních řádů. Asi nejlepším zdrojem jízdních řádů je v současnosti JDF (jednotný datový formát), který obsahuje jízdní řády a jiné pro tento projekt docela nepodsatné udaje.
+Jako dobrý začátek se mi jeví získání potřebných dat, ze kterých bude celá práce vycházet (nebo alespoň generátor). Asi nejpalčivější problém představuje získání jízdních řádů. Nejlepším zdrojem jízdních řádů je v současnosti asi JDF (jednotný datový formát), který obsahuje jízdní řády a jiné pro tento projekt docela nepodstatné udaje.
 
-Jelikož je formát jdf použivaný jenom na území ČR a na Slovenska a své využití najde jen v několika málo případech mě ani moc nepřekvapilo, že jsem nenašel žádnou knihovnu pro jeho načítání/manipulaci neexistuje. Je tedy jasné, že si tuto knihovnu musím napsat sám nicméně při hledání vhodného datového zdroje jsem narazil na mnohem [rozšířenější](https://transit.land/feed-registry) datový formát gtfs, který je vyvíjen googlem. Díky jeho dostupnosti a dalším výhodám (existence java knihovny atd...) jsem se rozhodl, že napíšu převodník do gtfs. Tento přístup bude mít tu výhodu, že generátor bude moci používat jak existující gtfs zdroje, tak ČR navíc jsem si říkal, že by se převodník mohl hodit i někomu jinému...
+Jelikož je formát JDF použivaný jenom na území ČR a na Slovensku, a své využití najde jen v několika málo případech mě ani moc nepřekvapilo, že jsem žádná knihovna pro jeho načítání/manipulaci neexistuje. Je tedy jasné, že si tuto knihovnu musím napsat sám, nicméně při hledání vhodného datového zdroje jsem narazil na mnohem [rozšířenější](https://transit.land/feed-registry) datový formát gtfs, který je vyvíjen googlem. Díky jeho dostupnosti a dalším výhodám (existence java knihovny atd...) jsem se rozhodl, že napíšu převodník do gtfs. Tento přístup bude mít tu výhodu, že generátor bude moci používat jak místa, která jsou dostupná přes gtfs, tak i části ČR, navíc jsem si říkal, že by se převodník mohl hodit i někomu jinému...
 
-O tom, jak pro popis projektu lze nalézt na [githubu](https://github.com/Hnatekmar/jdf2gtfs). O tom, jak vývoj převodníku probíhá se pokusím pravidelně blogovat. V součastnosti jsem jenom sepsal aktuální stav projektu popsal v tomto [blog postu]({{ site.baseurl }}{% link _posts/2017-07-19-aktualni-stav-prevodniku.markdown %})
+Popis projektu lze nalézt na [githubu](https://github.com/Hnatekmar/jdf2gtfs). O tom, jak vývoj převodníku probíhá se pokusím pravidelně blogovat. V součastnosti jsem jenom sepsal aktuální stav projektu v tomto [blog postu]({{ site.baseurl }}{% link _posts/2017-07-19-aktualni-stav-prevodniku.markdown %})
 
 ## Generátor
 Ačkoliv jsem se k návrhu samotného generátoru ještě nedostal je jasné, že asi největším problémem bude nalezení vhodného způsobu, jak ohodnotit jednotlivé buňky heatmapy (určitě bych to rád ještě probral).
 
 ## Frontend
-Frontend bude pravděpodobně napsaný v poupulárním [Play](https://www.playframework.com/) frameworku, který beží pod JBoss / Wildfly ale ještě jsem to nezkoušel a určitě si nechám poradit, pokud existuje něco lepšího.
+Frontend bude pravděpodobně napsaný v poupulárním [Play](https://www.playframework.com/) frameworku, který beží pod JBoss / Wildfly, ale ještě jsem to nezkoušel a určitě si nechám poradit, pokud existuje něco lepšího.
