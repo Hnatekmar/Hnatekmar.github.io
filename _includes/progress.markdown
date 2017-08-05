@@ -18,3 +18,7 @@ gantt
 	    Prototypování :b1, after a4, 5d
             Implementace :b2, after b1, 20d
 </div>
+Dostupné zdroje dat:
+- JDF
+	- [Dokumentace](http://www.drevari.sk/akcia/1432~002b0d7bbe1d.pdf)
+	- [Data](ftp://ftp.cisjr.cz/JDF/JDF.zip)
