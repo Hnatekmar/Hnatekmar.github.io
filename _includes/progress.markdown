@@ -19,6 +19,8 @@ gantt
             Implementace :b2, after b1, 20d
 </div>
 Dostupné zdroje dat:
+{% capture x %}
 - JDF
 	- [Dokumentace](http://www.drevari.sk/akcia/1432~002b0d7bbe1d.pdf)
 	- [Data](ftp://ftp.cisjr.cz/JDF/JDF.zip)
+{% endcapture %}{{ x | markdownify }}
